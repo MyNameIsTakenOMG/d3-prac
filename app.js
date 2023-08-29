@@ -17,30 +17,36 @@
 
 // const p = body.append('p')
 
-const data = [10, 20, 30, 40, 50];
+// const data = [10, 20, 30, 40, 50];
 
-const el = d3
-  .select('ul')
-  .selectAll('li')
-  .data(data)
-  // .join(
-  //   (enter) => {
-  //     return enter.append('li').style('color', 'purple');
-  //   },
-  //   (update) => {
-  //     return update.style('color', 'green');
-  //   },
-  //   (exit) => {
-  //     return exit.remove();
-  //   }
-  // )
-  .text((d) => {
-    return d;
-  });
+// const el = d3
+//   .select('ul')
+//   .selectAll('li')
+//   .data(data)
+//   // .join(
+//   //   (enter) => {
+//   //     return enter.append('li').style('color', 'purple');
+//   //   },
+//   //   (update) => {
+//   //     return update.style('color', 'green');
+//   //   },
+//   //   (exit) => {
+//   //     return exit.remove();
+//   //   }
+//   // )
+//   .text((d) => {
+//     return d;
+//   });
 
-el.enter()
-  .append('li')
-  .text((d) => d);
-el.exit().remove();
+// el.enter()
+//   .append('li')
+//   .text((d) => d);
+// el.exit().remove();
 
-console.log(el);
+// console.log(el);
+
+async function getData() {
+  const data = await d3.json('data.json');
+  console.log(data);
+}
+getData();
