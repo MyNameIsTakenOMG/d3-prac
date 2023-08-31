@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3 Histogram</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <select id="metric">
+      <option value="humidity" selected>humidity</option>
+      <option value="temperature">temperature</option>
+      <option value="dewPoint">dew point</option>
+      <option value="windSpeed">wind speed</option>
+      <option value="cloudCover">cloud cover</option>
+      <option value="ozone">ozone</option>
+    </select>
+    <div id="chart"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
